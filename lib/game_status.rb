@@ -21,6 +21,7 @@ def won?(board)
   else
     WIN_COMBINATIONS.each do |winning_combo|
       winning_combo.includes?(WIN_COMBINATIONS)
+      return winning_combo
     end
   end
 end
