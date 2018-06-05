@@ -17,18 +17,10 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |winning_combo|
-    if check_winning_combination?(board, 'X', winning_combo)
-      return winning_combo
-    elsif check_winning_combination?(board, 'O', winning_combo)
+    if board = WIN_COMBINATIONS.any? = true
       return winning_combo
     else
       return false
     end
-  end
-end
-
-def check_winning_combination?(board, player, winning_combo)
-  winning_combo.all? do |position|
-    board[position] == player
   end
 end
