@@ -16,15 +16,15 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board != WIN_COMBINATIONS 
+  if board != WIN_COMBINATIONS
     false
   else
     WIN_COMBINATIONS.each do |winning_combo|
-    if board = WIN_COMBINATIONS.detect == true
-      return winning_combo
-    else
-      return false
+      if board = WIN_COMBINATIONS.detect == true
+        return winning_combo
+      else
+        return false
+      end
     end
-  end
   end
 end
