@@ -20,11 +20,15 @@ def won?(board)
     false
   else
     WIN_COMBINATIONS.each do |winning_combo|
-      if board = WIN_COMBINATIONS.detect == true
-        return winning_combo
-      else
-        return false
-      end
+      win_index_1 = winning_combo[0]
+      win_index_2 = winning_combo[1]
+      win_index_3 = winning_combo[2]
+
+      position_1 = board(win_index_1)
+      position_2 = board(win_index_2)
+      position_3 = board(win_index_3)
+
+      position_1 == position_2 && position_2 == position_3 && position_taken(board, win_index_1)
     end
   end
 end
